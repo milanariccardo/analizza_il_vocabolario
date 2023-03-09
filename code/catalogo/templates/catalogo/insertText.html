@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Inserisci testo{% endblock %}
+
+{% block content %}
+    <br>
+    <div class="card card-body bg-light">
+        <h4> Inserisci informazioni: </h4>
+
+        {% crispy form %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success" role="alert">{{ message|safe }}</div>
+                {% else %}
+                    <div class="alert alert-danger" role="alert">{{ message|safe }}</div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

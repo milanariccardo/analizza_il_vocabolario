@@ -1,0 +1,12 @@
+selenium
+django
+psycopg2
+django-filter
+django-mathfilters
+django-crispy-forms
+django-widget-tweaks
+nltk
+syllables
+googletrans
+coverage
+django-nose

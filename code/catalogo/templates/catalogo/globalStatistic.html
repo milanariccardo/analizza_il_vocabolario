@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistiche globali{% endblock %}
+
+{% block content %}
+    <br>
+    <div class="container">
+        {% if empty == 1 %}
+            <div style="text-align: center;"><h3><p><b>Nessun testo presente nel sito</b></p></h3></div>
+        {% else %}
+            <div class="mt-2 mb-3 d-flex justify-content-center w-100 card card-body bg-light">
+                <p><b>Indice di complessità media:</b> {{ averageIC }}</p>
+                <p><b>Lunghezza media dei testi:</b> {{ averageTL }} parole</p>
+                <p><b>Densità lessicale media:</b> {{ averageLD }}</p>
+            </div>
+            <br/>
+            <h5>Di seguito tutte le parole inserite nel sito:</h5>
+            <div class="mt-2 mb-3 d-flex justify-content-center w-100 card card-body bg-light">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="sortable table table-striped table-sm" style="height: 500px; width: 100%; border-collapse: collapse">
+                        <tr>
+                            <th>PAROLA</th>
+                            <th>FREQUENZA</th>
+                        </tr>
+                        {% for k,v in token_dict.items %}
+                            <tr>
+                                <td>{{ k }}</td>
+                                <td>{{ v }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            </div>
+        {% endif %}
+
+{% endblock %}

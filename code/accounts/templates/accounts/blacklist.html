@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Blacklist{% endblock %}
+
+{% block content %}
+    <br>
+    <div class="card card-body bg-light">
+        <p> <b>Inserisci le parole che non vuoi più visualizzare:</b> </p>
+
+        {% crispy form %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success" role="alert">{{ message|safe }}</div>
+                {% else %}
+                    <div class="alert alert-warning" role="alert">{{ message|safe }}</div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br/>
+    {% if blacklist.values|length > 0 %}
+        <div class="card card-body bg-light">
+            <table class="table table-striped" style="width: 100%; border-collapse: collapse">
+                <tr>
+                    <th>PAROLA</th>
+                    <th></th>
+                </tr>
+                {% for obj in blacklist.values %}
+                    <tr>
+                        <td>{{ obj.parola }}</td>
+                        <form method="post" action="{% url 'delete_word' obj.id%}">
+                            {% csrf_token %}
+                            <td><button class="btn btn-primary" title = "Elimina dalla blacklist"><i class="fas fa-trash"></i></button></td>
+                        </form>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+{% endblock %}

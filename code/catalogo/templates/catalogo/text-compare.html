@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+
+
+{% block title %}Compara{% endblock %}
+
+{% block content %}
+    <br>
+    <!-- Informazioni sui testi scelti -->
+    <div class="container">
+        <div class="card card-body my-2 bg-light">
+            <h5><b>Primo testo selezionato:</b></h5>
+            <div class="row">
+                {% for testo in text1.values %}
+                    <div class="col">
+                        <p><b>Autore:</b> {{ testo.autore }}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Titolo:</b> {{ testo.titolo }}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Pubblicatore:</b>
+                            {% for user in user1 %}
+                                {{ user.username }}
+                            {% endfor%}
+                            </p>
+                    </div>
+                    <div class="col">
+                        {% if testo.tipo == '1' %}
+                            <p><b>Tipo:</b> Tema scolastico</p>
+                        {% elif testo.tipo == '2' %}
+                            <p><b>Tipo:</b> Saggio</p>
+                        {% elif testo.tipo == '3' %}
+                            <p><b>Tipo:</b> Articolo di giornale</p>
+                        {% else %}
+                            <p><b>Tipo:</b> Altro</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h5><b>Secondo testo selezionato:</b></h5>
+            <div class="row">
+                {% for testo in text2.values %}
+                    <div class="col">
+                        <p><b>Autore:</b> {{ testo.autore }}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Titolo:</b> {{ testo.titolo }}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Pubblicatore:</b>
+                            {% for user in user2 %}
+                                {{ user.username }}
+                            {% endfor%}
+                        </p>
+                    </div>
+                    <div class="col">
+                        {% if testo.tipo == '1' %}
+                            <p><b>Tipo:</b> Tema scolastico</p>
+                        {% elif testo.tipo == '2' %}
+                            <p><b>Tipo:</b> Saggio</p>
+                        {% elif testo.tipo == '3' %}
+                            <p><b>Tipo:</b> Articolo di giornale</p>
+                        {% else %}
+                            <p><b>Tipo:</b> Altro</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabella per visualizzare i confronti sugli indici -->
+    <div class="container">
+        <div class="card card-body my-3 bg-light">
+            <h5><b>Confronto indici</b></h5>
+            <div class="table-wrapper-scroll-y">
+                <table class="table table-striped table-sm" style="width: 100%; border-collapse: collapse">
+                    <tr>
+                        <th></th>
+                        <th>PRIMO TESTO</th>
+                        <th>SECONDO TESTO</th>
+                    </tr>
+
+                    <tr>
+                        <td>Indice di complessità</td>
+                        <td>{% for testo in text1.values %}{{ testo.complessita }}{% endfor %}</td>
+                        <td>{% for testo in text2.values %}{{ testo.complessita }}{% endfor %}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Numero di parole totali</td>
+                        <td>{% for testo in text1.values %}{{ testo.term_totali }}{% endfor %}</td>
+                        <td>{% for testo in text2.values %}{{ testo.term_totali }}{% endfor %}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Numero di parole uniche</td>
+                        <td>{% for testo in text1.values %}{{ testo.term_unici }}{% endfor %}</td>
+                        <td>{% for testo in text2.values %}{{ testo.term_unici }}{% endfor %}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Densità lessicale</td>
+                        <td>{% for testo in text1.values %}
+                            {{ testo.term_unici |div:testo.term_totali|floatformat:"3" }}{% endfor %}</td>
+                        <td>{% for testo in text2.values %}
+                            {{ testo.term_unici |div:testo.term_totali|floatformat:"3" }}{% endfor %}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabella per visualizzare il confronto dei termini -->
+    <div>
+        <div class="container">
+            <div class="card card-body my-3 bg-light">
+                <h5><b>Confronto parole</b></h5>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar ">
+                    <table class="sortable table table-striped table-sm" style="width: 100%; border-collapse: collapse">
+                        <tr>
+                            <th>PAROLA</th>
+                            <th>FREQUENZA PRIMO TESTO</th>
+                            <th>FREQUENZA SECONDO TESTO</th>
+                        </tr>
+
+                        {% for n, f in data.items %}
+                            <tr>
+                                <td>{{ n }}</td>
+                                {% for frequenza in f %}
+                                    <td>{{ frequenza }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

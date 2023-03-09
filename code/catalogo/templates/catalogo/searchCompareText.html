@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Compara{% endblock %}
+
+
+
+{% block content %}
+
+    {% if clean is True %}
+       <script>sessionStorage.clear();</script>
+    {% endif %}
+    <br>
+    <form method="get">
+        <div class="card card-body bg-light">
+            <h4 style="margin-top: 0">Compara</h4>
+            <div class="row">
+                <div class="form-group col-sm-4 col-md-3">
+                    {{ filter.form.titolo.label_tag }}
+                    {% render_field filter.form.titolo class="form-control" %}
+                </div>
+                <div class="form-group col-sm-4 col-md-3">
+                    {{ filter.form.autore.label_tag }}
+                    {% render_field filter.form.autore class="form-control" %}
+                </div>
+                <div class="form-group col-sm-4 col-md-3">
+                    {{ filter.form.tipo.label_tag }}
+                    {% render_field filter.form.tipo class="form-control" %}
+                </div>
+                <div class="form-group col-sm-4 col-md-3">
+                    {{ filter.form.pubblicatore.label_tag }}
+                    {% render_field filter.form.pubblicatore class="form-control" %}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Cerca</button>
+        </div>
+    </form>
+
+     <div class="card card-body bg-light my-3">
+        <div class="row">
+        <div class="col">
+            <p id="first_text">Primo testo selezionato:</p>
+                    </div>
+
+         <div class="col">
+            <p id="second_text">Secondo testo selezionato:</p>
+                 </div>
+
+
+         </div>
+        <button type="submit" id="compare" class="btn btn-primary" style="display: none;" onclick="go_to_compare()"><i class="fas fa-balance-scale"></i> Compara
+        </button>
+     </div>
+
+    {% if request.GET|length > 0 %}
+        <div class = "table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="table table-striped table-sm">
+                <tr>
+                    <th>TITOLO</th>
+                    <th>AUTORE</th>
+                    <th>TIPO</th>
+                    <th>DESCRIZIONE</th>
+                    <th>PUBBLICATORE</th>
+                    <th>VISUALIZZA ANALISI</th>
+                </tr>
+                {% for obj in filter.qs %}
+                    <tr>
+                        <td>{{ obj.titolo }}</td>
+                        <td>{{ obj.autore }}</td>
+                        <td>
+                            {% if obj.tipo == '1' %}
+                                Tema Scolastico
+                            {% elif obj.tipo == '2' %}
+                                Saggio
+                            {% elif obj.tipo == '3' %}
+                                Articolo di giornale
+                            {% else %}
+                                Altro
+                            {% endif %}
+                        </td>
+                        {% if obj.descrizione == '' %}
+                            <td><em class="text-muted">Nessuna descrizione</em></td>
+                        {% else %}
+                            <td>{{ obj.descrizione }}</td>
+                        {% endif %}
+
+                        <td>{{ obj.pubblicatore }}</td>
+                        <td>
+                            <button type="submit" id="select" class="btn btn-primary" title="Seleziona"
+                                    onclick="count_selections('{% filter force_escape %}{{ obj.titolo }}{% endfilter %}', '{{ obj.id }}')"><i
+                                    class="far fa-check-square"></i></button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <script>
+            var titolo1 = sessionStorage.getItem("titolo1");
+            var titolo2 = sessionStorage.getItem("titolo2");
+            if(titolo1 != null){
+                document.getElementById("first_text").innerHTML = "Primo testo selezionato: " + titolo1;
+            }
+            if(titolo2 != null){
+                document.getElementById("second_text").innerHTML = "Secondo testo selezionato: " + titolo1;
+            }
+            if(titolo1 != null && titolo2 != null){
+                document.getElementById("compare").style.display = "block";
+            }
+
+        </script>
+
+    {% endif %}
+{% endblock %}
+
+{% block javascript %}
+    <script>
+
+        function count_selections(title, id) {
+            var num_search;
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                num_search = sessionStorage.getItem("num_search");
+                if (num_search === null){
+                    num_search = 0;
+                }
+
+                if (num_search == 0) {
+                    sessionStorage.setItem("titolo1", title);
+                    sessionStorage.setItem("id1", id);
+                    num_search = num_search + 1;
+                    sessionStorage.setItem("num_search", num_search);
+
+                    // Stampa primo testo selezionato
+                    document.getElementById("first_text").innerHTML = "Primo testo selezionato: " + title;
+                    return;
+                }
+                if (num_search == 1) {
+                    sessionStorage.setItem("titolo2", title);
+                    sessionStorage.setItem("id2", id);
+                    num_search = 0;
+                    sessionStorage.setItem("num_search", num_search);
+
+                    // Stampa primo testo selezionato
+                    document.getElementById("first_text").innerHTML = "Primo testo selezionato: " + sessionStorage.getItem("titolo1");
+
+                    // Stampa secondo testo selezionato
+                    document.getElementById("second_text").innerHTML = "Secondo testo selezionato: " + title;
+
+                    // Mostra bottone compara
+                    document.getElementById("compare").style.display = "block";
+
+                    // Disabilita bottone seleziona
+                    document.getElementsByClassName("btn-select").disabled = "true"
+                }
+            }
+        }
+
+        function go_to_compare() {
+            var id1 = sessionStorage.getItem("id1");
+            var id2 = sessionStorage.getItem("id2");
+
+            sessionStorage.clear();
+
+            window.location = "{% url 'catalogo:text-compare' 1 2%}".replace(/1/, id1.toString()).replace(/2/, id2.toString());
+        }
+
+
+
+    </script>
+{% endblock %}

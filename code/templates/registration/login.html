@@ -1,0 +1,16 @@
+{% extends 'registration/baselogsign.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <center><h1>Analizza il vocabolario</h1></center>
+    <h2>Login:</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a class="btn btn-primary" href="{% url 'signup' %}">Registrati</a>
+        </div>
+    </form>
+{% endblock %}

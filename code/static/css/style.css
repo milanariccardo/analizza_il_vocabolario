@@ -1,0 +1,81 @@
+/* In questo file viene gestito lo stile delle pagine web */
+
+/* Navbar */
+ul {
+    background-color: #b1d4e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-nav
+{
+    z-index: 1;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    font-family: helvetica;
+
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+li a:hover {
+    background-color: lightgrey;
+}
+
+
+/* Gestione dello slidshow */
+
+/* Slideshow container */
+.carousel-inner {
+    height: 600px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Pulsanti Next e Prev*/
+.carousel-control-prev{
+    margin-left: 30%;
+    background-color: grey;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-control-next{
+    margin-right: 30%;
+    background-color: grey;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+    width: 25px;
+    height: 25px;
+}
+
+tr{
+    height: 15px;
+}
+
+td, th{
+    text-align: center;
+}
+
+.my-custom-scrollbar {
+position: relative;
+height: 450px;
+overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+display: block;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: " \25B4\25BE"
+}

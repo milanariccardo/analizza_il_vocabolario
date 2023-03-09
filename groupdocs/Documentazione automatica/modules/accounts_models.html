@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Models &#8212; analizzailvocabolario  documentazione</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="models">
+<h1>Models<a class="headerlink" href="#models" title="Link a questa intestazione">¶</a></h1>
+</div>
+<div class="section" id="module-accounts.models">
+<span id="accounts"></span><h1>Accounts<a class="headerlink" href="#module-accounts.models" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="accounts.models.Blacklist">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.models.</code><code class="sig-name descname">Blacklist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">utente</span></em>, <em class="sig-param"><span class="n">parola</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.models.Blacklist" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py exception">
+<dt id="accounts.models.Blacklist.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#accounts.models.Blacklist.DoesNotExist" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="accounts.models.Blacklist.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#accounts.models.Blacklist.MultipleObjectsReturned" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.T">
+<code class="sig-name descname">T</code><em class="property"> = None</em><a class="headerlink" href="#accounts.models.Blacklist.T" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#accounts.models.Blacklist.id" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#accounts.models.Blacklist.objects" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.parola">
+<code class="sig-name descname">parola</code><a class="headerlink" href="#accounts.models.Blacklist.parola" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.repeated">
+<code class="sig-name descname">repeated</code><em class="property"> = False</em><a class="headerlink" href="#accounts.models.Blacklist.repeated" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="accounts.models.Blacklist.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.models.Blacklist.save" title="Link a questa definizione">¶</a></dt>
+<dd><p>Save the current instance. Override this in a subclass if you want to
+control the saving process.</p>
+<p>The “force_insert” and “force_update” parameters can be used to insist
+that the «save» must be an SQL insert or update (or equivalent for
+non-SQL backends), respectively. Normally, they should not be set.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.success">
+<code class="sig-name descname">success</code><em class="property"> = False</em><a class="headerlink" href="#accounts.models.Blacklist.success" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.utente">
+<code class="sig-name descname">utente</code><a class="headerlink" href="#accounts.models.Blacklist.utente" title="Link a questa definizione">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.models.Blacklist.utente_id">
+<code class="sig-name descname">utente_id</code><a class="headerlink" href="#accounts.models.Blacklist.utente_id" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-catalogo.models">
+<span id="catalogo"></span><h1>Catalogo<a class="headerlink" href="#module-catalogo.models" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="catalogo.models.Testo">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.models.</code><code class="sig-name descname">Testo</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.models.Testo" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che descrive la tabella Testo, con campi: titolo, autore, tipo, descrizione,
+pubblicatore, termini unici, termini totali, complessità.</p>
+<dl class="py exception">
+<dt id="catalogo.models.Testo.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#catalogo.models.Testo.DoesNotExist" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="catalogo.models.Testo.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#catalogo.models.Testo.MultipleObjectsReturned" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.T">
+<code class="sig-name descname">T</code><em class="property"> = None</em><a class="headerlink" href="#catalogo.models.Testo.T" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.autore">
+<code class="sig-name descname">autore</code><a class="headerlink" href="#catalogo.models.Testo.autore" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.check_analyze">
+<code class="sig-name descname">check_analyze</code><em class="property"> = False</em><a class="headerlink" href="#catalogo.models.Testo.check_analyze" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.combo_filter">
+<code class="sig-name descname">combo_filter</code><em class="property"> = None</em><a class="headerlink" href="#catalogo.models.Testo.combo_filter" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.complessita">
+<code class="sig-name descname">complessita</code><a class="headerlink" href="#catalogo.models.Testo.complessita" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.descrizione">
+<code class="sig-name descname">descrizione</code><a class="headerlink" href="#catalogo.models.Testo.descrizione" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.models.Testo.get_tipo_display">
+<code class="sig-name descname">get_tipo_display</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.CharField: tipo&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.models.Testo.get_tipo_display" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#catalogo.models.Testo.id" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#catalogo.models.Testo.objects" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.pubblicatore">
+<code class="sig-name descname">pubblicatore</code><a class="headerlink" href="#catalogo.models.Testo.pubblicatore" title="Link a questa definizione">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.pubblicatore_id">
+<code class="sig-name descname">pubblicatore_id</code><a class="headerlink" href="#catalogo.models.Testo.pubblicatore_id" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.models.Testo.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.models.Testo.save" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che salva i testi e i token relativi ad esso nel database.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.scelta_tipo">
+<code class="sig-name descname">scelta_tipo</code><em class="property"> = (('1', 'Tema scolastico'), ('2', 'Saggio'), ('3', 'Articolo di giornale'), ('4', 'Altro'))</em><a class="headerlink" href="#catalogo.models.Testo.scelta_tipo" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.success">
+<code class="sig-name descname">success</code><em class="property"> = False</em><a class="headerlink" href="#catalogo.models.Testo.success" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.term_totali">
+<code class="sig-name descname">term_totali</code><a class="headerlink" href="#catalogo.models.Testo.term_totali" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.term_unici">
+<code class="sig-name descname">term_unici</code><a class="headerlink" href="#catalogo.models.Testo.term_unici" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.text_complete">
+<code class="sig-name descname">text_complete</code><em class="property"> = ''</em><a class="headerlink" href="#catalogo.models.Testo.text_complete" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.tipo">
+<code class="sig-name descname">tipo</code><a class="headerlink" href="#catalogo.models.Testo.tipo" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.titolo">
+<code class="sig-name descname">titolo</code><a class="headerlink" href="#catalogo.models.Testo.titolo" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Testo.token_set">
+<code class="sig-name descname">token_set</code><a class="headerlink" href="#catalogo.models.Testo.token_set" title="Link a questa definizione">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.models.Token">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.models.</code><code class="sig-name descname">Token</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.models.Token" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che descrive la tabella Token, con campi: testo, parola, frequenza.</p>
+<dl class="py exception">
+<dt id="catalogo.models.Token.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#catalogo.models.Token.DoesNotExist" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="catalogo.models.Token.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#catalogo.models.Token.MultipleObjectsReturned" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.frequenza">
+<code class="sig-name descname">frequenza</code><a class="headerlink" href="#catalogo.models.Token.frequenza" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#catalogo.models.Token.id" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.objects">
+<code class="sig-name descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#catalogo.models.Token.objects" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.parola">
+<code class="sig-name descname">parola</code><a class="headerlink" href="#catalogo.models.Token.parola" title="Link a questa definizione">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.testo">
+<code class="sig-name descname">testo</code><a class="headerlink" href="#catalogo.models.Token.testo" title="Link a questa definizione">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.models.Token.testo_id">
+<code class="sig-name descname">testo_id</code><a class="headerlink" href="#catalogo.models.Token.testo_id" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">analizzailvocabolario</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigazione</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Ricerca veloce</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Vai" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, team5.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/accounts_models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

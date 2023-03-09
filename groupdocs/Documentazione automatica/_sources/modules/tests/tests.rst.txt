@@ -1,0 +1,43 @@
+Tests
+=======
+
+Accounts
+========
+
+.. automodule:: accounts.tests.test_url
+   :members:
+   :undoc-members:
+
+.. automodule:: accounts.tests.test_views
+   :members:
+   :undoc-members:
+
+AV
+========
+
+.. automodule:: AV.tests.test_url
+   :members:
+   :undoc-members:
+
+.. automodule:: AV.tests.test_views
+   :members:
+   :undoc-members:
+   
+Catalogo
+========
+
+.. automodule:: catalogo.tests.test_form
+   :members:
+   :undoc-members:
+   
+.. automodule:: catalogo.tests.test_models
+   :members:
+   :undoc-members:
+
+.. automodule:: catalogo.tests.test_url
+   :members:
+   :undoc-members:
+
+.. automodule:: catalogo.tests.test_views
+   :members:
+   :undoc-members:

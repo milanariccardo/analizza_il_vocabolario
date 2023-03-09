@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Filters &#8212; analizzailvocabolario  documentazione</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="filters">
+<h1>Filters<a class="headerlink" href="#filters" title="Link a questa intestazione">¶</a></h1>
+</div>
+<div class="section" id="module-catalogo.filters">
+<span id="catalogo"></span><h1>Catalogo<a class="headerlink" href="#module-catalogo.filters" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="catalogo.filters.TextFilter">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.filters.</code><code class="sig-name descname">TextFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queryset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.filters.TextFilter" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che implementa un filtro per i model.</p>
+<dl class="py class">
+<dt id="catalogo.filters.TextFilter.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#catalogo.filters.TextFilter.Meta" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="catalogo.filters.TextFilter.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['titolo', 'autore', 'tipo', 'pubblicatore']</em><a class="headerlink" href="#catalogo.filters.TextFilter.Meta.fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.filters.TextFilter.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.filters.TextFilter.Meta.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Testo" title="catalogo.models.Testo"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Testo</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.filters.TextFilter.base_filters">
+<code class="sig-name descname">base_filters</code><em class="property"> = {'autore': &lt;django_filters.filters.CharFilter object&gt;, 'pubblicatore': &lt;django_filters.filters.ModelChoiceFilter object&gt;, 'tipo': &lt;django_filters.filters.ChoiceFilter object&gt;, 'titolo': &lt;django_filters.filters.CharFilter object&gt;}</em><a class="headerlink" href="#catalogo.filters.TextFilter.base_filters" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.filters.TextFilter.declared_filters">
+<code class="sig-name descname">declared_filters</code><em class="property"> = {'autore': &lt;django_filters.filters.CharFilter object&gt;, 'titolo': &lt;django_filters.filters.CharFilter object&gt;}</em><a class="headerlink" href="#catalogo.filters.TextFilter.declared_filters" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">analizzailvocabolario</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigazione</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Ricerca veloce</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Vai" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, team5.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/filters.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

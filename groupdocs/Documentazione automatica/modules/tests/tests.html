@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tests &#8212; analizzailvocabolario  documentazione</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tests">
+<h1>Tests<a class="headerlink" href="#tests" title="Link a questa intestazione">¶</a></h1>
+</div>
+<div class="section" id="module-accounts.tests.test_url">
+<span id="accounts"></span><h1>Accounts<a class="headerlink" href="#module-accounts.tests.test_url" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="accounts.tests.test_url.TestUrls">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.tests.test_url.</code><code class="sig-name descname">TestUrls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.tests.test_url.TestUrls" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare l’url dell’applicazione account</p>
+<dl class="py method">
+<dt id="accounts.tests.test_url.TestUrls.test_list_url_is_resolved">
+<code class="sig-name descname">test_list_url_is_resolved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#accounts.tests.test_url.TestUrls.test_list_url_is_resolved" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che l’url assegnato alla pagina di SignUp
+effettivamente indirizza alla pagina di registrazione</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-accounts.tests.test_views"></span><dl class="py class">
+<dt id="accounts.tests.test_views.TestView">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.tests.test_views.</code><code class="sig-name descname">TestView</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.tests.test_views.TestView" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare le view (viste)
+dell’applicazione account</p>
+<dl class="py method">
+<dt id="accounts.tests.test_views.TestView.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#accounts.tests.test_views.TestView.setUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo per impostare l’ambiente in cui si svolge il test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="accounts.tests.test_views.TestView.test_signup">
+<code class="sig-name descname">test_signup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#accounts.tests.test_views.TestView.test_signup" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina di SignUp sia 200 (buon fine)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AV.tests.test_url">
+<span id="av"></span><h1>AV<a class="headerlink" href="#module-AV.tests.test_url" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="AV.tests.test_url.TestUrls">
+<em class="property">class </em><code class="sig-prename descclassname">AV.tests.test_url.</code><code class="sig-name descname">TestUrls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_url.TestUrls" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare l’applicazione Analizza Vocabolario</p>
+<dl class="py method">
+<dt id="AV.tests.test_url.TestUrls.test_list_url_is_resolved">
+<code class="sig-name descname">test_list_url_is_resolved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_url.TestUrls.test_list_url_is_resolved" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che l’url assegnato alla pagina di homepage
+effettivamente indirizza alla pagina di homepage</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-AV.tests.test_views"></span><dl class="py class">
+<dt id="AV.tests.test_views.TestView">
+<em class="property">class </em><code class="sig-prename descclassname">AV.tests.test_views.</code><code class="sig-name descname">TestView</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_views.TestView" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare le view (viste) dell’applicazione
+di Analizza Vocabolario</p>
+<dl class="py method">
+<dt id="AV.tests.test_views.TestView.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_views.TestView.setUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo per impostare l’ambiente in cui si svolge il test:
+viene creato uno user che verrà utilizzato nel corso del test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="AV.tests.test_views.TestView.test_homepage">
+<code class="sig-name descname">test_homepage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_views.TestView.test_homepage" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina di Homepage sia 200 (buon fine), nel caso in cui il login
+sia stato effettuato correttamente.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="AV.tests.test_views.TestView.test_homepage_with_redirect">
+<code class="sig-name descname">test_homepage_with_redirect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AV.tests.test_views.TestView.test_homepage_with_redirect" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina di Homepage sia 302 (redirect), nel caso di mancato login.
+Questo perchè per visualizzare l’homepage è richiesto il login.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-catalogo.tests.test_form">
+<span id="catalogo"></span><h1>Catalogo<a class="headerlink" href="#module-catalogo.tests.test_form" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="catalogo.tests.test_form.FormTest">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.tests.test_form.</code><code class="sig-name descname">FormTest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare il form di inserimento di tutte le informazioni
+relative a un testo</p>
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.setUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo per impostare l’ambiente in cui si svolge il test:
+viene creato uno user che verrà utilizzato nel corso del test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_invalid_author_data">
+<code class="sig-name descname">test_invalid_author_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_invalid_author_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se l’autore non è stato inserito
+correttamente (presenza di soli segni di punteggitura/caratteri speciali ).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_invalid_text_complete_data">
+<code class="sig-name descname">test_invalid_text_complete_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_invalid_text_complete_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se il testo non è stato inserito
+correttamente (presenza di soli segni di punteggitura/caratteri speciali ).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_invalid_title_data">
+<code class="sig-name descname">test_invalid_title_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_invalid_title_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se il titolo non è stato inserito
+correttamente (presenza di soli segni di punteggitura/caratteri speciali ).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_no_autore_data">
+<code class="sig-name descname">test_no_autore_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_no_autore_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se l” autore non è stato inserito
+nel form (obbligatorio).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_no_data">
+<code class="sig-name descname">test_no_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_no_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica se i dati non siano stati inseriti,
+quindi la loro invalidità</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_no_text_data">
+<code class="sig-name descname">test_no_text_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_no_text_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se il testo non è stato inserito
+nel form (obbligatorio).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_no_title_data">
+<code class="sig-name descname">test_no_title_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_no_title_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica l’invalidità se il titolo non è stato inserito
+nel form (obbligatorio).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_author_data">
+<code class="sig-name descname">test_valid_author_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_author_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se l’autore è stato inserito
+correttamente (presenza di almeno di un carattere alfanumerico).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_author_number_data">
+<code class="sig-name descname">test_valid_author_number_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_author_number_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se l’autore è stato inserito
+correttamente (presenza di soli caratteri numerici).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_data">
+<code class="sig-name descname">test_valid_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica se i dati inseriti sono validi</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_text_complete_data">
+<code class="sig-name descname">test_valid_text_complete_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_text_complete_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se il testo è stato inserito
+correttamente (presenza di almeno di un carattere alfanumerico).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_text_complete_number_data">
+<code class="sig-name descname">test_valid_text_complete_number_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_text_complete_number_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se il testo è stato inserito
+correttamente (presenza di soli caratteri numerici).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_title_data">
+<code class="sig-name descname">test_valid_title_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_title_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se il titolo è stato inserito
+correttamente (presenza di almeno di un carattere alfanumerico).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_form.FormTest.test_valid_title_number_data">
+<code class="sig-name descname">test_valid_title_number_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.FormTest.test_valid_title_number_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la validità se il titolo è stato inserito
+correttamente (presenza di soli caratteri numerici).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="catalogo.tests.test_form.corretto">
+<code class="sig-prename descclassname">catalogo.tests.test_form.</code><code class="sig-name descname">corretto</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">testo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_form.corretto" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che controlla la correttezza del testo inserito nel form.
+:param testo: testo da inserire nel database
+:return: True se il testo è corretto, False altrimenti</p>
+</dd></dl>
+
+<span class="target" id="module-catalogo.tests.test_models"></span><dl class="py class">
+<dt id="catalogo.tests.test_models.TestModels">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.tests.test_models.</code><code class="sig-name descname">TestModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare i models dell’applicazione Catalogo</p>
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.createText">
+<code class="sig-name descname">createText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.createText" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo utilizzato per creare un testo da inserire nel database in fase di testing
+:return: riferimento al testo creato e inserito nel database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.createToken">
+<code class="sig-name descname">createToken</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.createToken" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo utilizzato per creare un token da inserire nel database in fase di testing
+return: riferimento al token creato e inserito nel database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.setUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo per impostare l’ambiente in cui si svolge il test:
+viene creato uno user che verrà utilizzato nel corso del test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.test_no_repetition_token">
+<code class="sig-name descname">test_no_repetition_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.test_no_repetition_token" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che può esistere lo stesso token in testi diversi</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.test_string_representation">
+<code class="sig-name descname">test_string_representation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.test_string_representation" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che verifica la corretta rappresentazione di un record della tabella Testo,
+nel momento in cui lo si stampa.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_models.TestModels.test_unique_token_in_text">
+<code class="sig-name descname">test_unique_token_in_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_models.TestModels.test_unique_token_in_text" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che un token deve essere presente una sola volta nel testo</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-catalogo.tests.test_url"></span><dl class="py class">
+<dt id="catalogo.tests.test_url.TestUrls">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.tests.test_url.</code><code class="sig-name descname">TestUrls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_url.TestUrls" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe utilizzata per testare l’applicazione di Catalogo</p>
+<dl class="py method">
+<dt id="catalogo.tests.test_url.TestUrls.test_list_url_is_resolved">
+<code class="sig-name descname">test_list_url_is_resolved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_url.TestUrls.test_list_url_is_resolved" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che l’url assegnato alla pagina di inserimento del testo
+effettivamente indirizza alla pagina di inserimento del testo.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_url.TestUrls.test_search_URL">
+<code class="sig-name descname">test_search_URL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_url.TestUrls.test_search_URL" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che l’url assegnato alla pagina di ricerca del testo
+effettivamente indirizza alla pagina di ricerca del testo.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_url.TestUrls.test_visualize_URL">
+<code class="sig-name descname">test_visualize_URL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_url.TestUrls.test_visualize_URL" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che l’url assegnato alla pagina del risultato di un’analisi
+di un testo effettivamente indirizza alla pagina in questione.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-catalogo.tests.test_views"></span><dl class="py class">
+<dt id="catalogo.tests.test_views.TestView">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.tests.test_views.</code><code class="sig-name descname">TestView</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che verifica il corretto funzionamento delle views (viste)
+dell’applicazione Catalogo.</p>
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.setUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo per impostare l’ambiente in cui si svolge il test:
+viene creato uno user che verrà utilizzato nel corso del test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_insert_text">
+<code class="sig-name descname">test_insert_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_insert_text" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina dell’analisi del testo sia 200 (buon fine), nel caso in cui il login
+sia stato effettuato correttamente.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_insert_text_redirect">
+<code class="sig-name descname">test_insert_text_redirect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_insert_text_redirect" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina dell’analisi del testo sia 302 (redirect), nel caso di mancato login.
+Questo perchè per inserire un testo è richiesto il login.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_search_text">
+<code class="sig-name descname">test_search_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_search_text" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina di ricerca del testo sia 200 (buon fine), nel caso in cui il login
+sia stato effettuato correttamente.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_search_text_redirect">
+<code class="sig-name descname">test_search_text_redirect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_search_text_redirect" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina di ricerca del testo sia 302 (redirect), nel caso di mancato login.
+Questo perchè per ricercare un testo è richiesto il login.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_visualize_text">
+<code class="sig-name descname">test_visualize_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_visualize_text" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina dell’analisi del testo sia 200 (buon fine), nel caso in cui il login
+sia stato effettuato correttamente.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.tests.test_views.TestView.test_visualize_text_redirect">
+<code class="sig-name descname">test_visualize_text_redirect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.tests.test_views.TestView.test_visualize_text_redirect" title="Link a questa definizione">¶</a></dt>
+<dd><p>Verifica che la risposta del server al tentativo di richiesta GET
+della pagina dell’analisi del testo sia 302 (redirect), nel caso di mancato login.
+Questo perchè per visualizzare l’analisi del testo è richiesto il login.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">analizzailvocabolario</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigazione</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Ricerca veloce</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Vai" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, team5.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/modules/tests/tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

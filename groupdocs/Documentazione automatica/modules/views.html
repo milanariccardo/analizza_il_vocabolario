@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Views &#8212; analizzailvocabolario  documentazione</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="views">
+<h1>Views<a class="headerlink" href="#views" title="Link a questa intestazione">¶</a></h1>
+</div>
+<div class="section" id="module-accounts.views">
+<span id="accounts"></span><h1>Accounts<a class="headerlink" href="#module-accounts.views" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="accounts.views.BlacklistView">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.views.</code><code class="sig-name descname">BlacklistView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.BlacklistView" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py method">
+<dt id="accounts.views.BlacklistView.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.BlacklistView.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.BlacklistView.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#accounts.views.BlacklistView.form_class" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="forms.html#accounts.forms.BlacklistForm" title="accounts.forms.BlacklistForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">accounts.forms.BlacklistForm</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="accounts.views.BlacklistView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">object_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.BlacklistView.get_context_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Insert the form into the context dict.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="accounts.views.BlacklistView.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.BlacklistView.get_success_url" title="Link a questa definizione">¶</a></dt>
+<dd><p>Mostra un messaggio di errore nel caso in cui uno o più campi non siano stati correttamente compilati e
+reindirizza alla pagina corretta in base a quanto richesto dall’utente nel form.
+:return: Reindirizza alla pagina di inserimento del testo nel caso la checkanalyze “Visualizza risultati”
+non sia abilitata. Altrimenti reindirizza alla pagina di visualizzazione dell’analisi del testo.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.BlacklistView.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#accounts.views.BlacklistView.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#accounts.models.Blacklist" title="accounts.models.Blacklist"><code class="xref py py-class docutils literal notranslate"><span class="pre">accounts.models.Blacklist</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.BlacklistView.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'accounts/blacklist.html'</em><a class="headerlink" href="#accounts.views.BlacklistView.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="accounts.views.DeleteBlacklistWord">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.views.</code><code class="sig-name descname">DeleteBlacklistWord</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.DeleteBlacklistWord" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py method">
+<dt id="accounts.views.DeleteBlacklistWord.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.DeleteBlacklistWord.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.DeleteBlacklistWord.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#accounts.views.DeleteBlacklistWord.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#accounts.models.Blacklist" title="accounts.models.Blacklist"><code class="xref py py-class docutils literal notranslate"><span class="pre">accounts.models.Blacklist</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.DeleteBlacklistWord.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/accounts/blacklist/'</em><a class="headerlink" href="#accounts.views.DeleteBlacklistWord.success_url" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="accounts.views.SignUp">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.views.</code><code class="sig-name descname">SignUp</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.SignUp" title="Link a questa definizione">¶</a></dt>
+<dd><p>Vista utilizzata per creare la pagina in cui un nuovo utente,
+può iscriversi. La classe riceve in input le informazioni inserite dall’utente
+attraverso il form di registrazione.</p>
+<dl class="py attribute">
+<dt id="accounts.views.SignUp.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#accounts.views.SignUp.form_class" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.forms.UserCreationForm</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.SignUp.success_url">
+<code class="sig-name descname">success_url</code><em class="property"> = '/accounts/login/'</em><a class="headerlink" href="#accounts.views.SignUp.success_url" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.views.SignUp.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'signup.html'</em><a class="headerlink" href="#accounts.views.SignUp.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AV.views">
+<span id="av"></span><h1>AV<a class="headerlink" href="#module-AV.views" title="Link a questa intestazione">¶</a></h1>
+<dl class="py function">
+<dt id="AV.views.homepage">
+<code class="sig-prename descclassname">AV.views.</code><code class="sig-name descname">homepage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AV.views.homepage" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che reindirizza l’Homepage
+:param request: richiesta http inviata dall’utente al server
+:return: Il render della homepage.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AV.views.removeAccount">
+<code class="sig-prename descclassname">AV.views.</code><code class="sig-name descname">removeAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AV.views.removeAccount" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che riceve la richiesta di rimozione  dell’account
+da parte dell’utente e la esegue.
+:param request: richiesta http inviata dall’utente al server
+:return: Il render della pagina di login.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-catalogo.views">
+<span id="catalogo"></span><h1>Catalogo<a class="headerlink" href="#module-catalogo.views" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="catalogo.views.GlobalStatView">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">GlobalStatView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.GlobalStatView" title="Link a questa definizione">¶</a></dt>
+<dd><p>Vista utilizzata per creare la pagina dove l’untente loggato può visualizzare l’analisi di un testo
+che ha selezionato/inserito.</p>
+<dl class="py method">
+<dt id="catalogo.views.GlobalStatView.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.GlobalStatView.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.views.GlobalStatView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">object_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.GlobalStatView.get_context_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Get the context for this view.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.GlobalStatView.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.views.GlobalStatView.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Token" title="catalogo.models.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Token</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.GlobalStatView.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'catalogo/globalStatistic.html'</em><a class="headerlink" href="#catalogo.views.GlobalStatView.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.views.TextAdd">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">TextAdd</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextAdd" title="Link a questa definizione">¶</a></dt>
+<dd><p>Vista utilizzata per creare la pagina dove l’untente loggato può inserire un testo.
+La classe riceve in input le informazioni inserite dall’utente attraverso il form di inserimento del testo.
+Inoltre controlla che i campi siano stati correttamente compilati.</p>
+<dl class="py method">
+<dt id="catalogo.views.TextAdd.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextAdd.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextAdd.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#catalogo.views.TextAdd.form_class" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="forms.html#catalogo.forms.TextCrispyFormComplete" title="catalogo.forms.TextCrispyFormComplete"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.forms.TextCrispyFormComplete</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.views.TextAdd.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextAdd.get_success_url" title="Link a questa definizione">¶</a></dt>
+<dd><p>Mostra un messaggio di errore nel caso in cui uno o più campi non siano stati correttamente compilati e
+reindirizza alla pagina corretta in base a quanto richesto dall’utente nel form.
+:return: Reindirizza alla pagina di inserimento del testo nel caso la checkanalyze “Visualizza risultati”
+non sia abilitata. Altrimenti reindirizza alla pagina di visualizzazione dell’analisi del testo.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextAdd.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.views.TextAdd.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Testo" title="catalogo.models.Testo"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Testo</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextAdd.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'catalogo/insertText.html'</em><a class="headerlink" href="#catalogo.views.TextAdd.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="catalogo.views.TextSearchCompare">
+<code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">TextSearchCompare</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextSearchCompare" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che renderizza alla pagina di ricerca per due testi da comparare. Inoltre mostra i risultati della query effettuata dall’utente.
+:return: Il render della pagina di ricerca.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.views.TextView">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">TextView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextView" title="Link a questa definizione">¶</a></dt>
+<dd><p>Vista utilizzata per creare la pagina dove l’untente loggato può visualizzare l’analisi di un testo
+che ha selezionato/inserito.</p>
+<dl class="py method">
+<dt id="catalogo.views.TextView.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextView.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextView.form_class">
+<code class="sig-name descname">form_class</code><a class="headerlink" href="#catalogo.views.TextView.form_class" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="forms.html#catalogo.forms.TranslateForm" title="catalogo.forms.TranslateForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.forms.TranslateForm</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.views.TextView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">object_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.TextView.get_context_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che seleziona il testo di cui bisogna visualizzare le informazioni e i relativi token.
+:return: Riferimenti al testo e i relativi token corretti da visualizzare.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextView.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.views.TextView.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Token" title="catalogo.models.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Token</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.TextView.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'catalogo/visualizza_risultati.html'</em><a class="headerlink" href="#catalogo.views.TextView.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.views.ViewCompare">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">ViewCompare</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.ViewCompare" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py method">
+<dt id="catalogo.views.ViewCompare.dispatch">
+<code class="sig-name descname">dispatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.ViewCompare.dispatch" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.views.ViewCompare.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">object_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.ViewCompare.get_context_data" title="Link a questa definizione">¶</a></dt>
+<dd><p>Get the context for this view.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.ViewCompare.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.views.ViewCompare.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Token" title="catalogo.models.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Token</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.views.ViewCompare.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'catalogo/text-compare.html'</em><a class="headerlink" href="#catalogo.views.ViewCompare.template_name" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="catalogo.views.search">
+<code class="sig-prename descclassname">catalogo.views.</code><code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.views.search" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che renderizza la pagina di ricerca. Inoltre mostra i risultati della query effettuata dall’utente.
+:return: Il render della pagina di ricerca.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">analizzailvocabolario</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigazione</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Ricerca veloce</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Vai" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, team5.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/views.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

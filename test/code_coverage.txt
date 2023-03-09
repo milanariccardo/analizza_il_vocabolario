@@ -1,0 +1,34 @@
+Integration tests:
+
+Name                                             Stmts   Miss  Cover
+--------------------------------------------------------------------
+AV\__init__.py                                       0      0   100%
+AV\urls.py                                           5      0   100%
+AV\views.py                                         10      0   100%
+textManipulation\textAnalyzer.py                   43      1    98%
+accounts\__init__.py                                 0      0   100%
+accounts\current_user.py                            16      8    50%
+accounts\forms.py                                   21      2    90%
+accounts\migrations\0001_initial.py                  8      0   100%
+accounts\migrations\0002_auto_20200518_1218.py       5      0   100%
+accounts\migrations\0003_auto_20200518_1222.py       7      0   100%
+accounts\migrations\0004_auto_20200519_1014.py       4      0   100%
+accounts\migrations\0005_auto_20200519_1016.py       4      0   100%
+accounts\migrations\__init__.py                      0      0   100%
+accounts\models.py                                  25     11    56%
+accounts\urls.py                                     3      0   100%
+accounts\views.py                                   34      1    97%
+catalogo\__init__.py                                 0      0   100%
+catalogo\filters.py                                  9      0   100%
+catalogo\forms.py                                   44      2    95%
+catalogo\migrations\0001_initial.py                  8      0   100%
+catalogo\migrations\__init__.py                      0      0   100%
+catalogo\models.py                                  44     31    30%
+catalogo\urls.py                                     6      0   100%
+catalogo\views.py                                  164     12    93%
+synonyms\synonyms.py                                21      0   100%
+translation\__init__.py                              0      0   100%
+translation\translate.py                            22      0   100%
+--------------------------------------------------------------------
+TOTAL                                              503     68    86%
+--------------------------------------------------------------------

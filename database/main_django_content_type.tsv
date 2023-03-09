@@ -1,0 +1,9 @@
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	accounts	blacklist
+8	catalogo	testo
+9	catalogo	token

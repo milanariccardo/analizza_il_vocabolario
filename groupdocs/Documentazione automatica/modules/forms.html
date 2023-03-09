@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Forms &#8212; analizzailvocabolario  documentazione</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="forms">
+<h1>Forms<a class="headerlink" href="#forms" title="Link a questa intestazione">¶</a></h1>
+</div>
+<div class="section" id="module-accounts.forms">
+<span id="accounts"></span><h1>Accounts<a class="headerlink" href="#module-accounts.forms" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="accounts.forms.BlacklistForm">
+<em class="property">class </em><code class="sig-prename descclassname">accounts.forms.</code><code class="sig-name descname">BlacklistForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.forms.BlacklistForm" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py class">
+<dt id="accounts.forms.BlacklistForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#accounts.forms.BlacklistForm.Meta" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="accounts.forms.BlacklistForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ('parola',)</em><a class="headerlink" href="#accounts.forms.BlacklistForm.Meta.fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.forms.BlacklistForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#accounts.forms.BlacklistForm.Meta.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#accounts.models.Blacklist" title="accounts.models.Blacklist"><code class="xref py py-class docutils literal notranslate"><span class="pre">accounts.models.Blacklist</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.forms.BlacklistForm.base_fields">
+<code class="sig-name descname">base_fields</code><em class="property"> = {'parola': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#accounts.forms.BlacklistForm.base_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.forms.BlacklistForm.declared_fields">
+<code class="sig-name descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#accounts.forms.BlacklistForm.declared_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="accounts.forms.BlacklistForm.helper">
+<code class="sig-name descname">helper</code><em class="property"> = &lt;crispy_forms.helper.FormHelper object&gt;</em><a class="headerlink" href="#accounts.forms.BlacklistForm.helper" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="accounts.forms.BlacklistForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#accounts.forms.BlacklistForm.media" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="accounts.forms.BlacklistForm.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">commit</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.forms.BlacklistForm.save" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che controlla che i dati inseriti siano corretti, nel caso procede con il salvataggio.
+Blocca il processo altrimenti.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-catalogo.forms">
+<span id="catalogo"></span><h1>Catalogo<a class="headerlink" href="#module-catalogo.forms" title="Link a questa intestazione">¶</a></h1>
+<dl class="py class">
+<dt id="catalogo.forms.TextCrispyForm">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.forms.</code><code class="sig-name descname">TextCrispyForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.forms.TextCrispyForm" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che definisce l’implementazione del form per l’inserimento del testo.</p>
+<dl class="py class">
+<dt id="catalogo.forms.TextCrispyForm.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#catalogo.forms.TextCrispyForm.Meta" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyForm.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ('titolo', 'autore', 'tipo', 'descrizione')</em><a class="headerlink" href="#catalogo.forms.TextCrispyForm.Meta.fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyForm.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#catalogo.forms.TextCrispyForm.Meta.model" title="Link a questa definizione">¶</a></dt>
+<dd><p>alias per <a class="reference internal" href="models.html#catalogo.models.Testo" title="catalogo.models.Testo"><code class="xref py py-class docutils literal notranslate"><span class="pre">catalogo.models.Testo</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyForm.base_fields">
+<code class="sig-name descname">base_fields</code><em class="property"> = {'autore': &lt;django.forms.fields.CharField object&gt;, 'descrizione': &lt;django.forms.fields.CharField object&gt;, 'tipo': &lt;django.forms.fields.TypedChoiceField object&gt;, 'titolo': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#catalogo.forms.TextCrispyForm.base_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyForm.declared_fields">
+<code class="sig-name descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#catalogo.forms.TextCrispyForm.declared_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyForm.helper">
+<code class="sig-name descname">helper</code><em class="property"> = &lt;crispy_forms.helper.FormHelper object&gt;</em><a class="headerlink" href="#catalogo.forms.TextCrispyForm.helper" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.forms.TextCrispyForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#catalogo.forms.TextCrispyForm.media" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.forms.TextCrispyFormComplete">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.forms.</code><code class="sig-name descname">TextCrispyFormComplete</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che aggiunge due campi (text_complete, check_analyze) al TextCrispyForm,
+non compresi nel model Testo.</p>
+<dl class="py class">
+<dt id="catalogo.forms.TextCrispyFormComplete.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.Meta" title="Link a questa definizione">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyFormComplete.Meta.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ('titolo', 'autore', 'tipo', 'descrizione', 'text_complete', 'combo_filter')</em><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.Meta.fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyFormComplete.base_fields">
+<code class="sig-name descname">base_fields</code><em class="property"> = {'autore': &lt;django.forms.fields.CharField object&gt;, 'combo_filter': &lt;django.forms.fields.ChoiceField object&gt;, 'descrizione': &lt;django.forms.fields.CharField object&gt;, 'text_complete': &lt;django.forms.fields.CharField object&gt;, 'tipo': &lt;django.forms.fields.TypedChoiceField object&gt;, 'titolo': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.base_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyFormComplete.declared_fields">
+<code class="sig-name descname">declared_fields</code><em class="property"> = {'combo_filter': &lt;django.forms.fields.ChoiceField object&gt;, 'text_complete': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.declared_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TextCrispyFormComplete.filterChoices">
+<code class="sig-name descname">filterChoices</code><em class="property"> = ((None, 'Nessun filtro'), (1, '1 carattere'), (2, '2 caratteri'))</em><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.filterChoices" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.forms.TextCrispyFormComplete.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.media" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.forms.TextCrispyFormComplete.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">commit</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.forms.TextCrispyFormComplete.save" title="Link a questa definizione">¶</a></dt>
+<dd><p>Metodo che controlla che i dati inseriti siano corretti, nel caso procede con il salvataggio.
+Blocca il processo altrimenti.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="catalogo.forms.TranslateForm">
+<em class="property">class </em><code class="sig-prename descclassname">catalogo.forms.</code><code class="sig-name descname">TranslateForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.forms.TranslateForm" title="Link a questa definizione">¶</a></dt>
+<dd><p>Classe che implementa il campo scelta della lingua nel template visualizza_risultati.html</p>
+<dl class="py attribute">
+<dt id="catalogo.forms.TranslateForm.base_fields">
+<code class="sig-name descname">base_fields</code><em class="property"> = {'lang': &lt;django.forms.fields.ChoiceField object&gt;}</em><a class="headerlink" href="#catalogo.forms.TranslateForm.base_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="catalogo.forms.TranslateForm.declared_fields">
+<code class="sig-name descname">declared_fields</code><em class="property"> = {'lang': &lt;django.forms.fields.ChoiceField object&gt;}</em><a class="headerlink" href="#catalogo.forms.TranslateForm.declared_fields" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="catalogo.forms.TranslateForm.media">
+<em class="property">property </em><code class="sig-name descname">media</code><a class="headerlink" href="#catalogo.forms.TranslateForm.media" title="Link a questa definizione">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="catalogo.forms.getLanguages">
+<code class="sig-prename descclassname">catalogo.forms.</code><code class="sig-name descname">getLanguages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#catalogo.forms.getLanguages" title="Link a questa definizione">¶</a></dt>
+<dd><p>metodo che ritorna la lista delle lingue disponibili</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">analizzailvocabolario</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigazione</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Ricerca veloce</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Vai" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, team5.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/forms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
